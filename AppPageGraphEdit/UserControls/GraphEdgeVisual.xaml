@@ -1,0 +1,8 @@
+﻿<Base:IELObjectBase
+    x:Class="AppPageGraphEdit.UserControls.GraphEdgeVisual"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:Base="clr-namespace:IEL.UserElementsControl.Base;assembly=LibraryIEL"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+    <Path x:FieldModifier="private" x:Name="SourceEdge"/>
+</Base:IELObjectBase>

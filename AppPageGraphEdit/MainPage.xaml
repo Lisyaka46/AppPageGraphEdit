@@ -1,0 +1,46 @@
+﻿<Base:PageBrowser
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Base="clr-namespace:OPLAPI.OIEL.CORE.Browser;assembly=OPLAPI"
+    xmlns:OPL="clr-namespace:OPLAPI.OIEL.UserElementsControl;assembly=OPLAPI"
+    xmlns:IEL="clr-namespace:IEL.UserElementsControl;assembly=LibraryIEL"
+    xmlns:Classes="clr-namespace:IEL.CORE.Classes;assembly=LibraryIEL"
+    x:Class="AppPageGraphEdit.MainPage"
+    ShowsNavigationUI="False" Title="Графовый редактор">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:FieldModifier="private" x:Name="CanvasVisualInitItem" Grid.ColumnSpan="2" Panel.ZIndex="2">
+            <Viewbox x:FieldModifier="private" x:Name="ViewBoxAddElement"/>
+        </Canvas>
+        <Border Width="80" BorderThickness="2,2,2,2" BorderBrush="Black" Margin="5,5,0,5" CornerRadius="10,10,10,10" Padding="3,3,3,3">
+            <StackPanel x:Name="StackPanelManagerElements" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top">
+                
+            </StackPanel>
+        </Border>
+        <Grid Grid.Column="1" Margin="5,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border x:FieldModifier="private" x:Name="BorderContainerWindow" Grid.RowSpan="1" BorderBrush="Black" BorderThickness="2,2,2,2" ClipToBounds="True"/>
+            <Border Grid.Row="1" Margin="0,3,0,0" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="5,5,5,5">
+                <StackPanel Orientation="Horizontal" Height="35">
+                    <IEL:IELButtonText x:Name="AddNewGraph" Text="Добавить граф" FontFamily="Franklin Gothic Heavy" CornerRadius="5,5,5,5" Margin="5,2,5,2">
+                        <IEL:IELButtonText.PaletteElement>
+                            <Classes:PaletteSpectrum>
+                                <Classes:PaletteSpectrum.BG>
+                                    <Classes:QData Default="#FF398270" Select="#FF48A97F" Used="#FF47E8A9"/>
+                                </Classes:PaletteSpectrum.BG>
+                            </Classes:PaletteSpectrum>
+                        </IEL:IELButtonText.PaletteElement>
+                    </IEL:IELButtonText>
+                    <TextBox x:Name="TextBoxWeightGraphIndex" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="18" TextAlignment="Center"/>
+                    <TextBox x:Name="TextBoxWeightGraph" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="18" TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Base:PageBrowser>
